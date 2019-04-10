@@ -1,0 +1,29 @@
+import kivy
+from kivy.app import App
+from kivy.uix.label import Label
+from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.button import Button
+import random
+
+class MyApp(App):
+	# create layout
+    def build(self):
+    	# create boxlayout, button, label
+        layout=BoxLayout(orientation='vertical')
+        mybutton=Button(text='click me', font_size=77)
+        self.mylabel=Label(text='ello',font_size=70)
+        mybutton.bind(on_press=self.change)
+        layout.add_widget(mybutton)
+        layout.add_widget(self.mylabel)
+        return layout
+    
+    def change(self, instance):
+        ls=['promised','neverland','stray dogs','fruit basket']
+        outcome=random.choice(ls)
+        print(outcome)
+        self.mylabel.text=outcome
+        self.mylabel.color=(1,1,0,0.5)
+        pass
+    
+if __name__=='__main__':
+        MyApp().run()
