@@ -12,3 +12,62 @@ class MyApp(App):
     
 if __name__=='__main__':
         MyApp().run()
+
+
+'''
+class MyApp(App):
+    ## TO DO 2.0 Create your layout in this method 
+    def build(self):
+
+        layout = BoxLayout(orientation = 'vertical')
+        mainLabel = Label(text='Do you wish to close the window', font_size = 72)
+
+  
+        self.Button1 = Button (text='Yes', font_size = 72)
+        self.Button1.color = (0,1,0,1)
+        self.Button1.bind(on_press = self.change1)  
+        self.state = 0
+        
+        
+        self.Button2 = Button (text= 'No', font_size = 72)
+        self.Button2.color = (1,0,0,1)
+        self.Button2.bind(on_press = self.change2)
+        self.state = 0
+        
+        layout.add_widget(mainLabel)
+        layout.add_widget(self.Button1)
+        layout.add_widget(self.Button2)
+        return layout
+    
+    ## TO DO 3.0 Write your callback 
+    def change1(self,instance):
+
+        if self.state == 0:
+            self.label.text = 'closing window'
+            self.state =1
+        
+        else:
+            self.label.text = 'Do you wish to close the window'
+            self.state = 0
+
+    def change2(self,instance):
+
+        if self.state == 0:
+            self.label.text = 'window doesnt close'
+            self.state =1
+        
+        else:
+            self.label.text = 'Do you wish to close the window'
+            self.state = 0    
+
+    
+        print (outcome)
+        self.myLabel.text = outcome
+        self.myLabel.color = (0,0,1,1) # RGBA
+        pass
+        ## TO DO 3.1 Make a list of the words
+        ## TO DO 3.2 Write code to randomly select an element from the list and assign it to the text attribute of the label          
+        ## TO DO 3.3 Write code to randomly generate a color and assign it to the color attribute of the  
+
+if __name__ == '__main__':
+    MyApp().run()'''
