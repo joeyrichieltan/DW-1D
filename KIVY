@@ -8,7 +8,9 @@ import random
 class MyApp(App):
     
     def build(self):
-    layout=BoxLayout
+    layout=BoxLayout(orientation='vertical')
+    self.notif=Label(text='notif text', font_size=24)
+    self.yesbutton=Button(on_press
     
 if __name__=='__main__':
         MyApp().run()
